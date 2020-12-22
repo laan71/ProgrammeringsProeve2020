@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Opskrift {
 
     String navn;
-    ArrayList ingredienser;
+    List<Ingrediens> ingredienser = new ArrayList<>();
     int antalPortioner;
     int tilberedningstid;
     String vejledning;
@@ -31,7 +32,7 @@ public class Opskrift {
     }
 
     public ArrayList getIngredienser() {
-        return ingredienser;
+        return (ArrayList) ingredienser;
     }
 
     public void setIngredienser(ArrayList ingredienser) {
@@ -63,7 +64,7 @@ public class Opskrift {
     }
 
     public void addIngrediens(Ingrediens ingrediens) {
-
+        this.ingredienser.add(ingrediens);
 
     }
     public void addIngrediens(String navn, int kalorier) {

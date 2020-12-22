@@ -21,26 +21,32 @@ public class SimpleTest extends Application {
 
         Opskrift glasurOpskrift = new Opskrift("Glasur",1,5,"Mix og bland");
 
-        Ingrediens vand1 = new Ingrediens("Vand", 0);
+        Ingrediens vand = new Ingrediens("Vand", 0);
         Ingrediens melis = new Ingrediens("Melis", 550);
 
         System.out.println("Opskrift er oprettet: " + glasurOpskrift.navn);
-        System.out.println("Ingrediens er oprettet: " + vand1.navn);
+        System.out.println("Ingrediens er oprettet: " + vand.navn);
         System.out.println("Ingrediens er oprettet: " + melis.navn);
 
         blankLine();
 
         Opskrift teOpskrift = new Opskrift("Te", 1, 5, "Kog vand, put tebrev i og lad trække 3 minutter");
 
-        Ingrediens vand2 = new Ingrediens("Vand", 0);
         Ingrediens te = new Ingrediens("Te", 2);
         Ingrediens citron = new Ingrediens("Citron", 10);
 
 
         System.out.println("Opskrift er oprettet: " + teOpskrift.navn);
-        System.out.println("Ingrediens er oprettet: " + vand2.navn);
+        System.out.println("Ingrediens er oprettet: " + vand.navn);
         System.out.println("Ingrediens er oprettet: " + te.navn);
         System.out.println("Ingrediens er oprettet: " + citron.navn);
+
+        glasurOpskrift.addIngrediens(vand);
+        glasurOpskrift.addIngrediens(melis);
+
+        teOpskrift.addIngrediens(vand);
+        teOpskrift.addIngrediens(te);
+        teOpskrift.addIngrediens(citron);
 
         // launch(args);
     }
