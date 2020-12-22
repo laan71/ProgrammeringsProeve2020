@@ -71,8 +71,12 @@ public class Opskrift {
 
     }
 
-    public void visIngredienser(){
+    public void visIngredienser(List<Ingrediens> ingredienser){
 
+        for (Ingrediens ingrediens : ingredienser)
+        {
+            System.out.println("- " + ingrediens);
+        }
     }
 
     public void visFremgangsmaade(){

@@ -48,6 +48,8 @@ public class SimpleTest extends Application {
         teOpskrift.addIngrediens(te);
         teOpskrift.addIngrediens(citron);
 
+        glasurOpskrift.visIngredienser(glasurOpskrift.ingredienser);
+
         // launch(args);
     }
     public void opretOpskrifter() {
